@@ -30,19 +30,19 @@ rm(list = ls()[!ls() %in% c("prd120_t4h", "prd120_t4m", "prd120_t4l",
                             "prd120_ggh", "prd120_ggm", "prd120_ggl")])
 
 stable <-
-    rbind(c(colMeans(prd120_ggh), colMeans(prd120_ggh)[1:4]-colMeans(prd120_ggh)[5]),
+    rbind(c(colMeans(prd120_ggl), colMeans(prd120_ggl)[1:4]-colMeans(prd120_ggl)[5]),
           c(colMeans(prd120_ggm), colMeans(prd120_ggm)[1:4]-colMeans(prd120_ggm)[5]),
-          c(colMeans(prd120_ggl), colMeans(prd120_ggl)[1:4]-colMeans(prd120_ggl)[5]),
-          c(colMeans(prd120_a4h), colMeans(prd120_a4h)[1:4]-colMeans(prd120_a4h)[5]),
-          c(colMeans(prd120_a4m), colMeans(prd120_a4m)[1:4]-colMeans(prd120_a4m)[5]),
+          c(colMeans(prd120_ggh), colMeans(prd120_ggh)[1:4]-colMeans(prd120_ggh)[5]),
           c(colMeans(prd120_a4l), colMeans(prd120_a4l)[1:4]-colMeans(prd120_a4l)[5]),
-          c(colMeans(prd120_t4h), colMeans(prd120_t4h)[1:4]-colMeans(prd120_t4h)[5]),
+          c(colMeans(prd120_a4m), colMeans(prd120_a4m)[1:4]-colMeans(prd120_a4m)[5]),
+          c(colMeans(prd120_a4h), colMeans(prd120_a4h)[1:4]-colMeans(prd120_a4h)[5]),
+          c(colMeans(prd120_t4l), colMeans(prd120_t4l)[1:4]-colMeans(prd120_t4l)[5]),
           c(colMeans(prd120_t4m), colMeans(prd120_t4m)[1:4]-colMeans(prd120_t4m)[5]),
-          c(colMeans(prd120_t4l), colMeans(prd120_t4l)[1:4]-colMeans(prd120_t4l)[5]))
+          c(colMeans(prd120_t4h), colMeans(prd120_t4h)[1:4]-colMeans(prd120_t4h)[5]))
           
-rownames(stable) <- c("High", "Medium", "Low",
-                      "High", "Medium", "Low",
-                      "High", "Medium", "Low")
+rownames(stable) <- c("Low", "Medium", "High",
+                      "Low", "Medium", "High",
+                      "Low", "Medium", "High")
 
 colnames(stable) <- c("Standard", "Empirical", "Archimedian", "Elliptical", "True",
                       "Standard", "Empirical", "Archimedian", "Elliptical")

@@ -30,19 +30,19 @@ rm(list = ls()[!ls() %in% c("prd240_t4h", "prd240_t4m", "prd240_t4l",
                             "prd240_ggh", "prd240_ggm", "prd240_ggl")])
 
 stable <-
-    rbind(c(colMeans(prd240_ggh), colMeans(prd240_ggh)[1:4]-colMeans(prd240_ggh)[5]),
+    rbind(c(colMeans(prd240_ggl), colMeans(prd240_ggl)[1:4]-colMeans(prd240_ggl)[5]),
           c(colMeans(prd240_ggm), colMeans(prd240_ggm)[1:4]-colMeans(prd240_ggm)[5]),
-          c(colMeans(prd240_ggl), colMeans(prd240_ggl)[1:4]-colMeans(prd240_ggl)[5]),
-          c(colMeans(prd240_a4h), colMeans(prd240_a4h)[1:4]-colMeans(prd240_a4h)[5]),
-          c(colMeans(prd240_a4m), colMeans(prd240_a4m)[1:4]-colMeans(prd240_a4m)[5]),
+          c(colMeans(prd240_ggh), colMeans(prd240_ggh)[1:4]-colMeans(prd240_ggh)[5]),
           c(colMeans(prd240_a4l), colMeans(prd240_a4l)[1:4]-colMeans(prd240_a4l)[5]),
-          c(colMeans(prd240_t4h), colMeans(prd240_t4h)[1:4]-colMeans(prd240_t4h)[5]),
+          c(colMeans(prd240_a4m), colMeans(prd240_a4m)[1:4]-colMeans(prd240_a4m)[5]),
+          c(colMeans(prd240_a4h), colMeans(prd240_a4h)[1:4]-colMeans(prd240_a4h)[5]),
+          c(colMeans(prd240_t4l), colMeans(prd240_t4l)[1:4]-colMeans(prd240_t4l)[5]),
           c(colMeans(prd240_t4m), colMeans(prd240_t4m)[1:4]-colMeans(prd240_t4m)[5]),
-          c(colMeans(prd240_t4l), colMeans(prd240_t4l)[1:4]-colMeans(prd240_t4l)[5]))
+          c(colMeans(prd240_t4h), colMeans(prd240_t4h)[1:4]-colMeans(prd240_t4h)[5]))
           
-rownames(stable) <- c("High", "Medium", "Low",
-                      "High", "Medium", "Low",
-                      "High", "Medium", "Low")
+rownames(stable) <- c("Low", "Medium", "High",
+                      "Low", "Medium", "High",
+                      "Low", "Medium", "High")
 
 colnames(stable) <- c("Standard", "Empirical", "Archimedian", "Elliptical", "True",
                       "Standard", "Empirical", "Archimedian", "Elliptical")
